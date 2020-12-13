@@ -1,7 +1,7 @@
 {
   "name": "health",
   "version": "0.0.1",
-  "description": "Queries health-check endpoints and returns appropriate emojis",
+  "description": "Queries HTTP endpoints and returns pass / fail images based on http status",
   "main": "dist/index.js",
   "dependencies": {
     "compression": "^1.7.4",

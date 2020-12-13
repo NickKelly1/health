@@ -31,33 +31,23 @@ login:
 up-d:
 	docker-compose --env-file .env.prod -f docker-compose.prod.yml up -d
 
-rm:
-	docker image rm nick3141/health
-
 reload-stop:
 	docker stop health
-	docker rm health
 	docker image rm ${NAME}
+	docker rm health
+	make rm-image
 
 reload-git:
 	git pull
 
+reload-up:
+	make up-d
+
 reload:
 	make reload-stop
 	make reload-git
-	make up-d
-
-# separated from deploy-docker b/c sometimes need sudo for docker, but don't want for git
-deploy-git:
-	git add .
-	git commit -m "deploy"
-	git push
-
-# separated from deploy-git b/c sometimes need sudo for docker, but don't want for git
-deploy-docker:
-	make build
-	make push
+	make reload-up
 
 deploy:
-	make deploy-git
-	make deploy-docker
+	make build
+	make push

@@ -8,11 +8,21 @@ Provides health checks based on the http status from an http request
 
 ### Default image size options
 
-- xxl
-- xl
-- l
-- m
-- sm
+xxl, xl, l, m, sm
+
+![xxl](https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=xxl)
+![xl](https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=xl)
+![l](https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=l)
+![m](https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=m)
+![sm](https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=sm)
+
+```
+# xxl:https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=xxl
+# xl: https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=xl
+# l:  https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=lh
+# m:  https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=mh
+# sm: https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=smh
+```
 
 ### Checking google.com
 
@@ -25,10 +35,10 @@ Provides health checks based on the http status from an http request
 
 ### Choosing a fail image
 
-![Choosing a bad image](https://health.nickkelly.dev/check?size=xl&url=https://google.com/this_path_doesnt_exist_dsnjfksdf)
+![Choosing a bad image](https://health.nickkelly.dev/check?size=xl&url=https://google.com/this_path_doesnt_exist_dsnjfksdf&bad=https://tinyurl.com/yxvpcy7c)
 ```
 # set bad=<bad image url> in the search
-# visit: https://health.nickkelly.dev/check?size=xl&url=https://google.com&okay=https://tinyurl.com/y6kzednq
+# visit: https://health.nickkelly.dev/check?size=xl&url=https://google.com&okay=https://tinyurl.com/y6kzednq&bad=https://tinyurl.com/yxvpcy7c
 ```
 
 ### Choosing a good image
