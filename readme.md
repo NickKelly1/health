@@ -61,7 +61,7 @@ docker run \
   -e LOG_MAX_SIZE=20m \
   -e LOG_ROTATION_MAX_AGE=7d \
   -e RATE_LIMIT_WINDOW_MS=60000 \
-  -e RATE_LIMIT_MAX=100
+  -e RATE_LIMIT_MAX=100 \
   --rm \
   nick3141/health
 ```

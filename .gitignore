@@ -4,3 +4,4 @@ memory
 .env.prod
 dist
 storage/logs
+_v_logs

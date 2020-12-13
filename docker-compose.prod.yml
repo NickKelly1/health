@@ -17,7 +17,7 @@ services:
     networks:
       - nk
     volumes:
-      - ./storage/logs:/usr/src/app/storage/logs
+      - ./_v_logs:/usr/src/app/storage/logs
 
 networks:
   nk:

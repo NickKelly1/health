@@ -46,6 +46,8 @@ const handleIcon = (icon: Icon): Handler => (req, res, next): void => {
 export async function setup(app: Express): Promise<Express> {
   // log access
   app.use(morgan('dev', { stream: loggerStream }) as Handler);
+  // any cors
+  app.use(cors() as Handler)
   // rate limit
   app.use(rateLimit({
     windowMs: EnvSingleton.RATE_LIMIT_WINDOW_MS,
@@ -53,8 +55,6 @@ export async function setup(app: Express): Promise<Express> {
   }));
   // gzip
   app.use(compression());
-  // any cors
-  app.use(cors() as Handler)
   // serve public
   app.use(express.static(EnvSingleton.DIR_PUBLIC, { extensions: ['html'], }));
 
