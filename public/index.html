@@ -55,7 +55,7 @@
       if (!title) return;
       const img = document.createElement('img');
       const search = new URLSearchParams([['url', document.location.origin]]);
-      img.src = `https://health.nickkelly.dev/check?url=${search.toString()}`;
+      img.src = `https://health.nickkelly.dev/check?${search.toString()}`;
       title.appendChild(img);
     })();
   </script>
