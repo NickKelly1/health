@@ -21,10 +21,7 @@ type Icon = { type: IconType, value: string };
 
 const handleIcon = (icon: Icon): Handler => (req, res, next): void => {
   switch (icon.type) {
-    case IconType.fs: return void fs
-      .createReadStream(icon.value)
-      .pipe(res.status(200))
-      .on('error', next)
+    case IconType.fs: return res.sendFile(icon.value);
     case IconType.url: return void res.redirect(icon.value)
     default: throw new httpErrors.InternalServerError();
   }
