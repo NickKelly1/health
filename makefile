@@ -32,8 +32,20 @@ up-d:
 	docker-compose --env-file .env.prod -f docker-compose.prod.yml up -d
 
 rm:
-	docker-compose -f docker-compose.prod.yml rm
 	docker image rm nick3141/health
+
+reload-stop:
+	docker stop health
+	docker rm health
+	docker image rm ${NAME}
+
+reload-git:
+	git pull
+
+reload:
+	make reload-stop
+	make reload-git
+	make up-d
 
 # separated from deploy-docker b/c sometimes need sudo for docker, but don't want for git
 deploy-git:
