@@ -1,10 +1,3 @@
-<!--
- *  Copyright (c) 2020 GraphQL Contributors
- *  All rights reserved.
- *
- *  This source code is licensed under the license found in the
- *  LICENSE file in the root directory of this source tree.
--->
 <!DOCTYPE html>
 <html>
   <head>
@@ -54,7 +47,10 @@
       const title = document.getElementById('heading');
       if (!title) return;
       const img = document.createElement('img');
-      const search = new URLSearchParams([['url', document.location.origin]]);
+      const search = new URLSearchParams([
+        ['size', 'xl'],
+        ['url', document.location.origin],
+      ]);
       img.src = `https://health.nickkelly.dev/check?${search.toString()}`;
       title.appendChild(img);
     })();
