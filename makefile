@@ -34,3 +34,10 @@ up-d:
 rm:
 	docker-compose -f docker-compose.prod.yml rm
 	docker image rm nick3141/health
+
+deploy:
+	git add .
+	git commit -m "deploy"
+	git push
+	make build
+	make push
