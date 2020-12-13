@@ -1,4 +1,4 @@
-# [HTTP Health Checker](health.nickkelly.dev)
+# [HTTP Health Checker](https://health.nickkelly.dev)
 
 ![status](https://health.nickkelly.dev/check?size=xl&url=https://health.nickkelly.dev/_health)
 
