@@ -63,7 +63,7 @@ docker run \
   -e RATE_LIMIT_WINDOW_MS=60000 \
   -e RATE_LIMIT_MAX=100 \
   --rm \
-  nick3141/health
+  nick3141/health:latest
 ```
 
 ## Run with Docker Compose:
@@ -74,7 +74,7 @@ version: "3"
 services:
   http_health_checker:
     container_name: http_health_checker
-    image: nick3141/health
+    image: nick3141/health:latest
     restart: unless-stopped
     ports:
       - 5000:5000

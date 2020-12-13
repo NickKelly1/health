@@ -3,7 +3,7 @@ version: "3"
 services:
   health:
     container_name: health
-    image: nick3141/health
+    image: nick3141/health:latest
     restart: unless-stopped
     ports:
       - 3001:3001
