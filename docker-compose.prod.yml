@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  example_gql_ts_accounts:
+    container_name: example_gql_ts_accounts
+    image: nick3141/example-gql-ts-accounts
+    restart: unless-stopped
+    ports:
+      - 5000:5000
+    networks:
+      - nk
+    environment:
+      - PORT=5000
+
+
+networks:
+  nk:
+    driver: bridge

@@ -1,0 +1,68 @@
+2020-12-14 00:08:23 [debug]: 	Listening on port 6000
+2020-12-14 00:09:01 [debug]: 	Listening on port 6000
+2020-12-14 00:09:19 [debug]: 	Listening on port 6000
+2020-12-14 00:09:28 [debug]: 	Listening on port 6000
+2020-12-14 00:09:46 [debug]: 	Listening on port 6000
+2020-12-14 00:10:26 [debug]: 	Listening on port 3001
+2020-12-14 00:10:37 [debug]: 	Listening on port 3001
+2020-12-14 00:10:38 [info]: 	GET /docs 404 12.044 ms - 143
+2020-12-14 00:10:43 [error]: 	Error: {
+    message: "No url or bad url given"
+}
+2020-12-14 00:10:43 [info]: 	GET /check 400 5.350 ms - 37
+2020-12-14 00:10:43 [info]: 	GET /favicon.ico 200 16.396 ms - -
+2020-12-14 00:11:05 [debug]: 	Listening on port 3001
+2020-12-14 00:11:06 [error]: 	Error: {
+    message: "No url given"
+}
+2020-12-14 00:11:06 [info]: 	GET /check 400 5.263 ms - 26
+2020-12-14 00:11:06 [info]: 	GET /favicon.ico 200 3.100 ms - -
+2020-12-14 00:11:11 [error]: 	Error: {}
+2020-12-14 00:11:11 [info]: 	GET /check?url=www.google.com 500 6.321 ms - 35
+2020-12-14 00:14:53 [debug]: 	Listening on port 3001
+2020-12-14 00:14:55 [info]: 	[www.google.com] Checking...
+2020-12-14 00:14:55 [warn]: 	[www.google.com] Errored: {}
+2020-12-14 00:14:55 [error]: 	Error: {}
+2020-12-14 00:14:55 [info]: 	GET /check?url=www.google.com 500 24.683 ms - 35
+2020-12-14 00:14:56 [info]: 	GET /favicon.ico 200 2.926 ms - -
+2020-12-14 00:15:04 [info]: 	[http://www.google.com] Checking...
+2020-12-14 00:15:04 [info]: 	[http://www.google.com] Success: {
+    type: 0,
+    value: "/home/nick/development/projects/health/public/icons/tick.png"
+}
+2020-12-14 00:15:04 [info]: 	GET /check?url=http://www.google.com 200 217.839 ms - -
+2020-12-14 00:15:16 [debug]: 	Listening on port 3001
+2020-12-14 00:15:18 [info]: 	[http://www.google.com] Checking...
+2020-12-14 00:15:18 [info]: 	[http://www.google.com] Success: {
+    type: "fs",
+    value: "/home/nick/development/projects/health/public/icons/tick.png"
+}
+2020-12-14 00:15:18 [info]: 	GET /check?url=http://www.google.com 200 222.096 ms - -
+2020-12-14 00:15:19 [info]: 	GET /favicon.ico 200 2.233 ms - -
+2020-12-14 00:15:45 [debug]: 	Listening on port 3001
+2020-12-14 00:15:50 [info]: 	[http://www.google.com/dfngjkfdngkjsdfg] Checking...
+2020-12-14 00:15:50 [info]: 	[http://www.google.com/dfngjkfdngkjsdfg] Fail: {
+    type: "fs",
+    value: "/home/nick/development/projects/health/public/icons/tick.png"
+}
+2020-12-14 00:15:50 [info]: 	GET /check?url=http://www.google.com/dfngjkfdngkjsdfg 200 34.632 ms - -
+2020-12-14 00:18:21 [debug]: 	Listening on port 3001
+2020-12-14 00:18:33 [info]: 	[https://google.com] Checking...
+2020-12-14 00:18:33 [info]: 	[https://google.com] Success: {
+    type: "fs",
+    value: "/home/nick/development/projects/health/public/icons/tick.png"
+}
+2020-12-14 00:18:33 [info]: 	GET /check?url=https://google.com 200 751.612 ms - -
+2020-12-14 00:18:42 [info]: 	[https://nickkelly.dev/_health_check] Checking...
+2020-12-14 00:18:43 [info]: 	[https://nickkelly.dev/_health_check] Fail: {
+    type: "fs",
+    value: "/home/nick/development/projects/health/public/icons/tick.png"
+}
+2020-12-14 00:18:43 [info]: 	GET /check?url=https://nickkelly.dev/_health_check 200 507.487 ms - -
+2020-12-14 00:18:54 [info]: 	[https://nickkelly.dev/_/health_check] Checking...
+2020-12-14 00:18:54 [info]: 	[https://nickkelly.dev/_/health_check] Fail: {
+    type: "fs",
+    value: "/home/nick/development/projects/health/public/icons/tick.png"
+}
+2020-12-14 00:18:54 [info]: 	GET /check?url=https://nickkelly.dev/_/health_check 200 85.630 ms - -
+2020-12-14 00:19:49 [debug]: 	Listening on port 3001

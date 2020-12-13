@@ -1,3 +1,5 @@
 node_modules
 memory
-.env\.env.prod
+.env
+.env.prod
+dist

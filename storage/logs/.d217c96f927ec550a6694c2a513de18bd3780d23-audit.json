@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 7
+    },
+    "auditLog": "/home/nick/development/projects/health/storage/logs/.d217c96f927ec550a6694c2a513de18bd3780d23-audit.json",
+    "files": [
+        {
+            "date": 1607864903792,
+            "name": "/home/nick/development/projects/health/storage/logs/2020-12-14.error.log",
+            "hash": "94b48b5596142631e1ec6fa29db334ec"
+        }
+    ]
+}

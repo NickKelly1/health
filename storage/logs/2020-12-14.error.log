@@ -1,0 +1,9 @@
+2020-12-14 00:10:43 [error]: 	Error: {
+    message: "No url or bad url given"
+}
+2020-12-14 00:11:06 [error]: 	Error: {
+    message: "No url given"
+}
+2020-12-14 00:11:11 [error]: 	Error: {}
+2020-12-14 00:14:55 [warn]: 	[www.google.com] Errored: {}
+2020-12-14 00:14:55 [error]: 	Error: {}
