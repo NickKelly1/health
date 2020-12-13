@@ -28,7 +28,6 @@ const handleIcon = (icon: Icon): Handler => (req, res, next): void => {
 };
 
 export async function setup(app: Express): Promise<Express> {
-  // app.use('*', (req, res) => res.json({ hi: 'work', }));
   // log access
   app.use(morgan('dev', { stream: loggerStream }) as Handler);
   // rate limit

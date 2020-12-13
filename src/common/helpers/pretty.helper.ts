@@ -15,6 +15,13 @@ export function pretty(json: any): string {
 export function prettyQ(obj: any): string {
   const printed: Set<any> = new Set();
 
+  if (obj && obj instanceof Error) {
+    const plainError: Record<any, any> = {};
+    Object.getOwnPropertyNames(obj).forEach(p => { plainError[p] = (obj as any)[p]; });
+    Object.getOwnPropertySymbols(obj).forEach(s => { plainError[s as any] = (obj as any)[s]; });
+    return prettyQ(plainError);
+  }
+
   // if object has already been printed, show [Circular...] instead
   // stops circular references from destroying everything
   const singular = <A extends object>(fn: (value: A) => string) => (value: A): string => {
