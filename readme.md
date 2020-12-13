@@ -23,15 +23,15 @@ Provides health checks based on the http status from an http request
 # visit: https://health.nickkelly.dev/check?size=xl&url=https://google.com
 ```
 
-### Choosing a "bad" image
+### Choosing a fail image
 
-![Choosing a bad image](https://health.nickkelly.dev/check?size=xl&url=&https://google.com/this_path_doesnt_exist_dsnjfksdf)
+![Choosing a bad image](https://health.nickkelly.dev/check?size=xl&url=https://google.com/this_path_doesnt_exist_dsnjfksdf)
 ```
 # set bad=<bad image url> in the search
 # visit: https://health.nickkelly.dev/check?size=xl&url=https://google.com&okay=https://tinyurl.com/y6kzednq
 ```
 
-### Choosing a "good" image
+### Choosing a good image
 
 ![Choosing a good image](https://health.nickkelly.dev/check?size=xl&url=https://google.com&good=https://tinyurl.com/y6kzednq)
 ```
