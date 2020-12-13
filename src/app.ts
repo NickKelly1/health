@@ -75,6 +75,17 @@ export async function setup(app: Express): Promise<Express> {
     }
   })().catch(next));
 
+    // health check
+  app.get('/_health', (req, res) => res.status(200).json({
+    message: 'Okay :)',
+    date: new Date().toISOString(),
+  }));
+
+  // not found
+  app.use(function (req, res, next) {
+    next(new httpErrors.NotFound());
+  });
+
   app.use(function (err, req, res, next) {
     logger.error(`Error: ${prettyQ(err)}`);
     const _err = err instanceof HttpError ? err : new httpErrors.InternalServerError();

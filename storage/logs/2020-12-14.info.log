@@ -66,3 +66,10 @@
 }
 2020-12-14 00:18:54 [info]: 	GET /check?url=https://nickkelly.dev/_/health_check 200 85.630 ms - -
 2020-12-14 00:19:49 [debug]: 	Listening on port 3001
+2020-12-14 00:30:30 [debug]: 	Listening on port 3001
+2020-12-14 00:30:37 [info]: 	[https://google.com] Checking...
+2020-12-14 00:30:38 [info]: 	[https://google.com] Success: {
+    type: "url",
+    value: "https://tinyurl.com/y6kzednq"
+}
+2020-12-14 00:30:38 [info]: 	GET /check?url=https://google.com&okay=https://tinyurl.com/y6kzednq&bad=https://tinyurl.com/y6923waq 302 635.812 ms - 100
