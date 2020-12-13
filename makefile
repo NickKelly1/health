@@ -8,8 +8,6 @@ TAG 		:= $$(cat package.json | grep version | head -1 | awk -F: '{ print $$2 }' 
 IMG			:= ${NAME}:${TAG}
 LATEST	:= ${NAME}:latest
 
-update-scripts:
-
 echo-tag:
 	echo ${TAG}
 
@@ -33,8 +31,6 @@ login:
 up-d:
 	docker-compose --env-file .env.prod -f docker-compose.prod.yml up -d
 
-dev-up-d:
-	docker-compose --env-file .env -f docker-compose.dev.yml up -d
-
-# production-up:
-# 	@docker-compose --env-file .env.prod up -d
+rm:
+	docker-compose -f docker-compose.prod.yml rm
+	docker image rm nick3141/health
