@@ -28,3 +28,40 @@ Provides health checks based on the http status from a http request
 # set good=<good image url> in the search
 # visit: https://health.nickkelly.dev/check?url=https://google.com&good=https://tinyurl.com/y6kzednq
 ```
+
+## Run with Docker:
+
+```bash
+docker run \
+  --name health-checker \
+  -p 5000:5000 \
+  -e PORT=5000 \
+  -e LOG_DIR=./storage/logs \
+  -e LOG_MAX_SIZE=20m \
+  -e LOG_ROTATION_MAX_AGE=7d \
+  -e RATE_LIMIT_WINDOW_MS=60000 \
+  -e RATE_LIMIT_MAX=100
+  --rm \
+  nick3141/health
+```
+
+## Run with Docker Compose:
+
+```yaml
+version: "3"
+
+services:
+  http_health_checker:
+    container_name: http_health_checker
+    image: nick3141/health
+    restart: unless-stopped
+    ports:
+      - 5000:5000
+    environment:
+      - PORT=5000
+      - LOG_DIR=./storage/logs
+      - LOG_MAX_SIZE=20m
+      - LOG_ROTATION_MAX_AGE=7d
+      - RATE_LIMIT_WINDOW_MS=60000
+      - RATE_LIMIT_MAX=100
+```
