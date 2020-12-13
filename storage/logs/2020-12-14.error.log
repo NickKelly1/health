@@ -7,3 +7,6 @@
 2020-12-14 00:11:11 [error]: 	Error: {}
 2020-12-14 00:14:55 [warn]: 	[www.google.com] Errored: {}
 2020-12-14 00:14:55 [error]: 	Error: {}
+2020-12-14 01:03:30 [error]: 	Error: {
+    message: "Not Found"
+}

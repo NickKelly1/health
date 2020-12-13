@@ -15,6 +15,17 @@
         width: 100%;
         overflow: hidden;
       }
+      .centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .col {
+        flex-direction: column;
+      }
+      .mr-3 {
+        margin-right: 32px;
+      }
     </style>
     <title>Health</title>
     <meta name="theme-color" content="#007acc" />
@@ -26,8 +37,26 @@
     <meta name="msapplication-TileColor" content="#603cba" />
     <meta name="theme-color" content="#ffffff" />
   </head>
-
-  <body>
-    Welcome
+  <body class="centered col">
+    <h1 class="centered" id="heading">
+      <span class="mr-3">HTTP Health Checker</span>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="https://github.com/NickKelly1/health.git">GitHub</a></li>
+        <li><a href="https://github.com/NickKelly1/health/readme.md">Readme</a></li>
+        <li><a href="https://hub.docker.com/repository/docker/nick3141/health">Docker</a></li>
+      </ul>
+    </nav>
   </body>
+  <script>
+    (function() {
+      const title = document.getElementById('heading');
+      if (!title) return;
+      const img = document.createElement('img');
+      const search = new URLSearchParams([['url', document.location.origin]]);
+      img.src = `https://health.nickkelly.dev/check?url=${search.toString()}`;
+      title.appendChild(img);
+    })();
+  </script>
 </html>
