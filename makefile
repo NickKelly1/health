@@ -43,9 +43,9 @@ deploy-git:
 
 # separated from deploy-git b/c sometimes need sudo for docker, but don't want for git
 deploy-docker:
-	build
-	push
+	make build
+	make push
 
 deploy:
-	deploy-git
-	deploy-docker
+	make deploy-git
+	make deploy-docker
