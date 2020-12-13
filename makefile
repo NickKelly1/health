@@ -35,9 +35,17 @@ rm:
 	docker-compose -f docker-compose.prod.yml rm
 	docker image rm nick3141/health
 
-deploy:
+# separated from deploy-docker b/c sometimes need sudo for docker, but don't want for git
+deploy-git:
 	git add .
 	git commit -m "deploy"
 	git push
-	make build
-	make push
+
+# separated from deploy-git b/c sometimes need sudo for docker, but don't want for git
+deploy-docker:
+	build
+	push
+
+deploy:
+	deploy-git
+	deploy-docker
