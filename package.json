@@ -1,6 +1,6 @@
 {
-  "name": "http-status-emoji",
-  "version": "1.0.0",
+  "name": "health",
+  "version": "0.0.1",
   "description": "Queries health-check endpoints and returns appropriate emojis",
   "main": "dist/index.js",
   "dependencies": {
