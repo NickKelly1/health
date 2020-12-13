@@ -1,6 +1,6 @@
 # Health ![status](https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health)
 
-Provides health checks based on the http status from a http request
+Provides health checks based on the http status from an http request
 
 ## Usage
 
