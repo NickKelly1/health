@@ -1,0 +1,84 @@
+:root {
+  --bg-primary: #c7aa8b;
+  /* --bg-primary-dark: rgb(199, 170, 139); */
+  --bg-secondary: #e4d0ba;
+  --bg-dark: #323232;
+  --bg-dark-focused: black;
+
+  --bg-light: #4d4d4d;
+  --bg-light-focused: white;
+
+  --text-primary: #c7aa8b;
+  --text-light: #ededed;
+  --text-dark: #4d4d4d;
+
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 32px;
+}
+
+body {
+  font-family: "Roboto Condensed", Roboto, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media only screen and (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dbg-orange { background-color: orange; }
+.dbg-red { background-color: red; }
+.dbg-yellow { background-color: yellow; }
+.dbg-green { background-color: green; }
+.dbg-pink { background-color: pink; }
+
+.flex-col {
+  flex-direction: column;
+}

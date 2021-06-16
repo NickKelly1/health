@@ -45,7 +45,7 @@ export function prettyQ(obj: any): string {
     undefined: (x: undefined) => "undefined",
     boolean:   (x: boolean) => x.toString(),
     number:    (x: number) => x,
-    bigint:    (x: number) => `__bigint__${x.toString()}__`,
+    bigint:    (x: number) => `(BigInt) ${x.toString()}`,
     string:    (x: string) => enquote(x),
     object:    (x: object | null) => x === null ? 'null' : singular(traverse)(x),
     function:  (x: Function) => x.toString(),
