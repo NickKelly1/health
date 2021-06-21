@@ -1,5 +1,6 @@
 .hero-section {
-  height: 420px;
+  padding: var(--spacing-3) 0;
+  height: 440px;
   background-color: var(--bg-secondary);
 }
 
@@ -102,14 +103,52 @@
 }
 
 .readme a {
-  color: var(--text-dark);
+  color: var(--text-dark-link);
+  text-decoration: none;
+
+}
+
+/* width */
+.readme ::-webkit-scrollbar {
+  background-color: var(--bg-dark);
+  border-radius: var(--spacing-1);
+  height: var(--spacing-1);
+}
+
+/* Track */
+.readme ::-webkit-scrollbar-track {
+  background-color: var(--bg-dark);
+  border-radius: var(--spacing-1);
+  height: var(--spacing-1);
+}
+
+/* Handle */
+.readme ::-webkit-scrollbar-thumb {
+  background-color: var(--bg-primary);
+  border-radius: var(--spacing-1);
 }
 
 .readme pre {
+  position: relative;
   overflow-x: auto;
-  /* white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word; */
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-1);
+  border-radius: var(--spacing-1);
+}
+
+.readme h1,
+.readme h2,
+.readme h3,
+.readme h4,
+.readme h5,
+.readme h6 {
+  line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: var(--spacing-2);
+}
+
+.readme h1,
+.readme h2 {
+  border-bottom: 1px solid var(--text-dark-border-1);
+  padding-bottom: 0.3em;
 }
