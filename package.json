@@ -1,6 +1,6 @@
 {
-  "name": "http-icon",
-  "version": "0.0.1",
+  "name": "http-icons",
+  "version": "1.0.0",
   "description": "Queries HTTP endpoints and returns pass / fail images based on http status",
   "main": "dist/index.js",
   "dependencies": {
@@ -59,6 +59,7 @@
     "JavaScript",
     "Health",
     "Health-Check",
+    "Http Icons",
     "http"
   ],
   "author": "Nick Kelly",

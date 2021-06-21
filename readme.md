@@ -26,7 +26,7 @@ xxl, xl, l, m, sm
 
 ![Google check](https://http-icons.nickkelly.dev/check?size=xl&url=https://google.com)
 
-```
+```sh
 # check if google returns good http status
 # visit: https://http-icons.nickkelly.dev/check?size=xl&url=https://google.com
 ```
@@ -65,7 +65,7 @@ docker run \
   nick3141/http-icons:latest
 ```
 
-## Run with Docker Compose:
+## Run with Docker Compose
 
 ```yaml
 version: "3"

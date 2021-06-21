@@ -1,9 +1,9 @@
 version: "3"
 
 services:
-  health:
-    container_name: health
-    image: nick3141/health:latest
+  http_icons:
+    container_name: http_icons
+    image: nick3141/http_icons:latest
     restart: unless-stopped
     ports:
       - 3001:3001
@@ -14,6 +14,7 @@ services:
       - LOG_ROTATION_MAX_AGE=7d
       - RATE_LIMIT_WINDOW_MS=60000
       - RATE_LIMIT_MAX=100
+      - CACHE_VIEWS=true
     networks:
       - nk
     volumes:

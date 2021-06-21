@@ -1,5 +1,5 @@
 # https://blog.container-solutions.com/tagging-docker-images-the-right-way
-NAME		:= nick3141/health
+NAME		:= nick3141/http_icons
 # tag as git commit:
 # TAG 		:= $$(git log -1 --pretty=%h)
 # tag as package.json version:
@@ -32,9 +32,9 @@ up-d:
 	docker-compose --env-file .env.prod -f docker-compose.prod.yml up -d
 
 reload-stop:
-	docker stop health
+	docker stop http_icons
 	docker image rm ${NAME}
-	docker rm health
+	docker rm http_icons
 	make rm-image
 
 reload-git:
