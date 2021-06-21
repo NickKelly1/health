@@ -3,7 +3,7 @@ version: "3"
 services:
   http_icons:
     container_name: http_icons
-    image: nick3141/http_icons:latest
+    image: nick3141/http-icons:latest
     restart: unless-stopped
     ports:
       - 3001:3001
