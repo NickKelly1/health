@@ -10,7 +10,12 @@
 
   --text-primary: #c7aa8b;
   --text-light: #ededed;
-  --text-dark: #4d4d4d;
+  /* --text-dark: #4d4d4d; */
+  --text-dark: #404040;
+  --text-dark-border-1: #404040;
+  --text-dark-border-2: #7D7D7D;
+
+  --text-dark-link: #4040AF;
 
   --spacing-1: 8px;
   --spacing-2: 16px;
@@ -19,6 +24,7 @@
 
 body {
   font-family: "Roboto Condensed", Roboto, sans-serif;
+  font-size: large;
 }
 
 .container {
