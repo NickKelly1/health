@@ -33,7 +33,7 @@ xxl, xl, l, m, sm
 
 ### Choosing a fail image
 
-![Choosing a bad image](https://http-icons.nickkelly.dev/check?size=xl&url=https://google.com/this_path_doesnt_exist_dsnjfksdf&bad=https://https-icons/nickkelly.dev/assets/img/alternative-bad-icon.png)
+![Choosing a bad image](https://http-icons.nickkelly.dev/check?size=xl&url=https://google.com/this_path_doesnt_exist_dsnjfksdf&bad=https://http-icons.nickkelly.dev/assets/img/alternative-bad-icon.png)
 
 ```sh
 # set bad=<bad image url> in the search

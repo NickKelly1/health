@@ -105,6 +105,27 @@
 .readme a {
   color: var(--text-dark-link);
   text-decoration: none;
+
+}
+
+/* width */
+.readme ::-webkit-scrollbar {
+  background-color: var(--bg-dark);
+  border-radius: var(--spacing-1);
+  height: var(--spacing-1);
+}
+
+/* Track */
+.readme ::-webkit-scrollbar-track {
+  background-color: var(--bg-dark);
+  border-radius: var(--spacing-1);
+  height: var(--spacing-1);
+}
+
+/* Handle */
+.readme ::-webkit-scrollbar-thumb {
+  background-color: var(--bg-primary);
+  border-radius: var(--spacing-1);
 }
 
 .readme pre {
@@ -113,7 +134,6 @@
   background-color: rgba(0, 0, 0, 0.1);
   padding: var(--spacing-1);
   border-radius: var(--spacing-1);
-  /* color: var(--text-light); */
 }
 
 .readme h1,
