@@ -1,5 +1,5 @@
 # https://blog.container-solutions.com/tagging-docker-images-the-right-way
-NAME		:= nick3141/http_icons
+NAME		:= nick3141/http-icons
 # tag as git commit:
 # TAG 		:= $$(git log -1 --pretty=%h)
 # tag as package.json version:

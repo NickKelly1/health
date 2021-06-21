@@ -53,7 +53,7 @@ xxl, xl, l, m, sm
 
 ```bash
 docker run \
-  --name http-icons \
+  --name http_icons \
   -p 5000:5000 \
   -e PORT=5000 \
   -e LOG_DIR=./storage/logs \
@@ -71,8 +71,8 @@ docker run \
 version: "3"
 
 services:
-  http-icons:
-    container_name: http-icons
+  http_icons:
+    container_name: http_icons
     image: nick3141/http-icons:latest
     restart: unless-stopped
     ports:
@@ -85,6 +85,7 @@ services:
       # - LOG_ROTATION_MAX_AGE=7d
       # - RATE_LIMIT_WINDOW_MS=60000
       # - RATE_LIMIT_MAX=100
+      # - CACHE_VIEWS=true
 ```
 
 ## Development
