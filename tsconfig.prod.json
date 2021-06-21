@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "./__tests__/*",
+    "./__tests__/**",
+    "./__tests__/**/*",
+    "src/**/*.spec.ts",
+  ],
+  "compilerOptions": {
+    "rootDir": "./src",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+  }
+}

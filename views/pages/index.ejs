@@ -1,0 +1,36 @@
+<%- include("../layouts/head.ejs") %>
+<link href="assets/pages/index/index.css" rel="stylesheet">
+<script type="module" src="assets/pages/index/index.js"></script>
+</head>
+<body class="centered flex-col">
+  <%- include("../partials/top-bar.ejs") %>
+
+  <main class="container-fluid">
+
+    <section class="container-fluid hero-section">
+      <div class="hero-image"></div>
+    </section>
+
+    <section class="container-fluid status-section">
+      <div class="container centered">
+        <div class="status-container">
+          <h2 class="status-header">
+            Server status
+          </h2>
+          <span id="site-status">
+            <bit-spinner class="bit-spinner"></bit-spinner>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-fluid readme-section">
+      <div class="container">
+        <div class="readme">
+          <%- readme %>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+<%- include("../layouts/tail.ejs") %>

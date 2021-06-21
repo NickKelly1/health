@@ -1,8 +1,8 @@
-# [HTTP Health Checker](https://health.nickkelly.dev)
+# [HTTP Icons](https://http-icons.nickkelly.dev)
 
-![status](https://health.nickkelly.dev/check?size=xl&url=https://health.nickkelly.dev/_health)
+![status](https://http-icons.nickkelly.dev/check?size=xl&url=https://http-icons.nickkelly.dev/_health)
 
-Provides health checks based on the http status from an http request
+Send http requests and returns an icon based on the status.
 
 ## Usage
 
@@ -10,51 +10,50 @@ Provides health checks based on the http status from an http request
 
 xxl, xl, l, m, sm
 
-![xxl](https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=xxl)
-![xl](https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=xl)
-![l](https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=l)
-![m](https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=m)
-![sm](https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=sm)
+![xxl](https://http-icons.nickkelly.dev/check?url=https://http-icons.nickkelly.dev/_health&size=xxl)
+![xl](https://http-icons.nickkelly.dev/check?url=https://http-icons.nickkelly.dev/_health&size=xl)
+![l](https://http-icons.nickkelly.dev/check?url=https://http-icons.nickkelly.dev/_health&size=l)
+![m](https://http-icons.nickkelly.dev/check?url=https://http-icons.nickkelly.dev/_health&size=m)
+![sm](https://http-icons.nickkelly.dev/check?url=https://http-icons.nickkelly.dev/_health&size=sm)
 
-```
-# xxl:https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=xxl
-# xl: https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=xl
-# l:  https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=lh
-# m:  https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=mh
-# sm: https://health.nickkelly.dev/check?url=https://health.nickkelly.dev/_health&size=smh
-```
+- **xxl**: `https://http-icons.nickkelly.dev/check?url=https://http-icons.nickkelly.dev/_health&size=xxl`
+- **xl**: `https://http-icons.nickkelly.dev/check?url=https://http-icons.nickkelly.dev/_health&size=xl`
+- **l**: `https://http-icons.nickkelly.dev/check?url=https://http-icons.nickkelly.dev/_health&size=lh`
+- **m**: `https://http-icons.nickkelly.dev/check?url=https://http-icons.nickkelly.dev/_health&size=mh`
+- **sm**: `https://http-icons.nickkelly.dev/check?url=https://http-icons.nickkelly.dev/_health&size=smh`
 
 ### Checking google.com
 
-![Google check](https://health.nickkelly.dev/check?size=xl&url=https://google.com)
+![Google check](https://http-icons.nickkelly.dev/check?size=xl&url=https://google.com)
 
-```
+```sh
 # check if google returns good http status
-# visit: https://health.nickkelly.dev/check?size=xl&url=https://google.com
+# visit: https://http-icons.nickkelly.dev/check?size=xl&url=https://google.com
 ```
 
 ### Choosing a fail image
 
-![Choosing a bad image](https://health.nickkelly.dev/check?size=xl&url=https://google.com/this_path_doesnt_exist_dsnjfksdf&bad=https://tinyurl.com/yxvpcy7c)
-```
+![Choosing a bad image](https://http-icons.nickkelly.dev/check?size=xl&url=https://google.com/this_path_doesnt_exist_dsnjfksdf&bad=https://tinyurl.com/yxvpcy7c)
+
+```sh
 # set bad=<bad image url> in the search
-# visit: https://health.nickkelly.dev/check?size=xl&url=https://google.com&okay=https://tinyurl.com/y6kzednq&bad=https://tinyurl.com/yxvpcy7c
+# visit: https://http-icons.nickkelly.dev/check?size=xl&url=https://google.com&okay=https://tinyurl.com/y6kzednq&bad=https://tinyurl.com/yxvpcy7c
 ```
 
 ### Choosing a good image
 
-![Choosing a good image](https://health.nickkelly.dev/check?size=xl&url=https://google.com&good=https://tinyurl.com/y6kzednq)
-```
+![Choosing a good image](https://http-icons.nickkelly.dev/check?size=xl&url=https://google.com&good=https://tinyurl.com/y6kzednq)
+
+```sh
 # set good=<good image url> in the search
-# visit: https://health.nickkelly.dev/check?size=xl&url=https://google.com&good=https://tinyurl.com/y6kzednq
+# visit: https://http-icons.nickkelly.dev/check?size=xl&url=https://google.com&good=https://tinyurl.com/y6kzednq
 ```
 
-
-## Run with Docker:
+## Run with Docker
 
 ```bash
 docker run \
-  --name health-checker \
+  --name http-icons \
   -p 5000:5000 \
   -e PORT=5000 \
   -e LOG_DIR=./storage/logs \
@@ -63,18 +62,18 @@ docker run \
   -e RATE_LIMIT_WINDOW_MS=60000 \
   -e RATE_LIMIT_MAX=100 \
   --rm \
-  nick3141/health:latest
+  nick3141/http-icons:latest
 ```
 
-## Run with Docker Compose:
+## Run with Docker Compose
 
 ```yaml
 version: "3"
 
 services:
-  http_health_checker:
-    container_name: http_health_checker
-    image: nick3141/health:latest
+  http-icons:
+    container_name: http-icons
+    image: nick3141/http-icons:latest
     restart: unless-stopped
     ports:
       - 5000:5000
@@ -87,3 +86,18 @@ services:
       # - RATE_LIMIT_WINDOW_MS=60000
       # - RATE_LIMIT_MAX=100
 ```
+
+## Development
+
+### Linting ejs files
+
+```sh
+# run the npm script "ejslint" which runs the npm package "ejslint"
+# and pass to it the file being linted
+npm run ejslint -- views/pages/index.ejs
+# alternatively: `npx ejslint views/pages/index.ejs`
+```
+
+## TODO
+
+Separate documentation from application and host elsewhere
