@@ -17,6 +17,7 @@ declare global {
       stop(this: core.Express, cb?: (() => any)): Promise<void>;
       start(this: core.Express, cb?: (() => any)): Promise<void>
       getPort(this: core.Express): number;
+      locals: { VER: string };
     }
   }
 }

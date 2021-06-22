@@ -110,6 +110,7 @@ export function createApp(config: Config): Express {
   app.set('view-engine', 'ejs');
   if (config.CACHE_VIEWS) app.enable('view cache');
   else app.disable('view cache');
+  app.locals.VER = config.VER;
 
   app.use((req, res, next) => {
     req.config = app.config;

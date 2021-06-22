@@ -10,7 +10,7 @@
 }
 
 .hero-image {
-  background-image: url("/assets/img/hero-image.svg");
+  /* background image from ejs */
   height: 420px;
 
   /* background-attachment: fixed; */
@@ -110,29 +110,35 @@
 
 /* width */
 .readme ::-webkit-scrollbar {
-  background-color: var(--bg-dark);
+  background-color: var(--bg-primary);
   border-radius: var(--spacing-1);
   height: var(--spacing-1);
 }
 
 /* Track */
 .readme ::-webkit-scrollbar-track {
-  background-color: var(--bg-dark);
+  background-color: var(--bg-primary);
   border-radius: var(--spacing-1);
   height: var(--spacing-1);
 }
 
 /* Handle */
 .readme ::-webkit-scrollbar-thumb {
-  background-color: var(--bg-primary);
+  background-color: var(--bg-dark);
   border-radius: var(--spacing-1);
 }
 
 .readme pre {
-  position: relative;
   overflow-x: auto;
   background-color: rgba(0, 0, 0, 0.1);
   padding: var(--spacing-1);
+  border-radius: var(--spacing-1);
+}
+
+/* codes that don't follow a pre */
+.readme :not(pre) + code {
+  overflow-x: auto;
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: var(--spacing-1);
 }
 

@@ -2,6 +2,14 @@ import path from 'path';
 import { DIR_ROOT } from './dir';
 import { Extractor } from './utils/extractor';
 import { KeyMap } from './utils/keymap';
+import fs from 'fs';
+import md5 from 'md5';
+
+const version: string = JSON.parse(fs
+  .readFileSync(path.join(DIR_ROOT, 'package.json'))
+  .toString('utf-8')).version;
+
+if (!version) throw new Error('Failed to parse version');
 
 export interface ConfigOptions {
   NODE_ENV: 'development' | 'production' | 'testing';
@@ -11,7 +19,8 @@ export interface ConfigOptions {
   LOG_ROTATION_MAX_AGE?: string;
   RATE_LIMIT_WINDOW_MS?: number;
   RATE_LIMIT_MAX?: number;
-  CACHE_VIEWS: boolean;
+  CACHE_VIEWS?: boolean;
+  CACHE_ASSETS?: boolean;
 }
 
 const key: KeyMap<Required<ConfigOptions>> = {
@@ -23,6 +32,7 @@ const key: KeyMap<Required<ConfigOptions>> = {
   RATE_LIMIT_MAX: 'RATE_LIMIT_MAX',
   RATE_LIMIT_WINDOW_MS: 'RATE_LIMIT_WINDOW_MS',
   CACHE_VIEWS: 'CACHE_VIEWS',
+  CACHE_ASSETS: 'CACHE_ASSETS',
 };
 
 export class Config {
@@ -38,8 +48,12 @@ export class Config {
   public readonly RATE_LIMIT_WINDOW_MS: number;
   public readonly RATE_LIMIT_MAX: number;
   public readonly CACHE_VIEWS: boolean;
+  public readonly CACHE_ASSETS: boolean;
 
   // constants
+  public readonly VERSION: string = version;
+  public readonly VER: string = md5(version); // version hash for page caching
+
   public readonly DIR_PUBLIC = path.normalize(path.join(DIR_ROOT, './public'));
   public readonly DIR_ICONS = path.normalize(path.join(DIR_ROOT, './public/assets/icons'));
   public readonly EXT = path.extname(__filename);
@@ -83,6 +97,7 @@ export class Config {
     this.RATE_LIMIT_MAX = extract.optional(() => extract.integer(key.RATE_LIMIT_MAX)) ?? 100;
 
     this.CACHE_VIEWS = extract.optional(() => extract.boolean('CACHE_VIEWS')) ?? true;
+    this.CACHE_ASSETS = extract.optional(() => extract.boolean('CACHE_ASSETS')) ?? true;
   }
 
   is_dev(): boolean { return this.NODE_ENV === 'development'; };

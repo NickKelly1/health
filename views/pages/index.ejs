@@ -1,6 +1,6 @@
 <%- include("../layouts/head.ejs") %>
-<link href="assets/pages/index/index.css" rel="stylesheet">
-<script type="module" src="assets/pages/index/index.js"></script>
+<link href="assets/pages/index/index.css?ver=<%= VER %>" rel="stylesheet">
+<script type="module" src="assets/pages/index/index.js?ver=<%= VER %>"></script>
 </head>
 <body class="centered flex-col">
   <%- include("../partials/top-bar.ejs") %>
@@ -8,7 +8,8 @@
   <main class="container-fluid">
 
     <section class="container-fluid hero-section">
-      <div class="hero-image"></div>
+      <div class="hero-image" style="background-image: url('/assets/img/hero-image.svg?ver=<%= VER %>')">
+      </div>
     </section>
 
     <section class="container-fluid status-section">
