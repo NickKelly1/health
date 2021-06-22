@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const imgUrl = Url.createObjectURL(blob);
       const img = new Image(imgUrl);
       img.src = imgUrl;
+      img.alt = "site status";
       img.addEventListener('load', function () {
         Url.revokeObjectURL(this.src);
         const status = document.getElementById('site-status');

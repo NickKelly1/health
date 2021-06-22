@@ -20,7 +20,7 @@ build-no-cache:
 	docker tag ${IMG} ${LATEST}
 
 push:
-	docker push ${NAME}
+	docker push ${IMG}
 
 pull:
 	docker pull ${NAME}

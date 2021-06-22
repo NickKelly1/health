@@ -20,6 +20,7 @@ export function middleware(app: Express): Express {
       useDefaults: true,
       directives: {
         // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to
+        'report-uri': '/csp-reports',
         'report-to': 'default',
         'img-src': [
           '\'self\'',
