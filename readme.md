@@ -61,6 +61,8 @@ docker run \
   -e LOG_ROTATION_MAX_AGE=7d \
   -e RATE_LIMIT_WINDOW_MS=60000 \
   -e RATE_LIMIT_MAX=100 \
+  -e CACHE_VIEWS=true \
+  -e CACHE_ASSETS=true \
   --rm \
   nick3141/http-icons:latest
 ```
@@ -86,6 +88,7 @@ services:
       # - RATE_LIMIT_WINDOW_MS=60000
       # - RATE_LIMIT_MAX=100
       # - CACHE_VIEWS=true
+      # - CACHE_ASSETS=true
 ```
 
 ## Development

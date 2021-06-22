@@ -7,8 +7,9 @@ import { _health } from './api/_health';
 import md from 'markdown-it';
 import fs from 'fs/promises';
 
-export function routing(app: Express): Express {
 
+export function routing(app: Express): Express {
+  // landing page
   let readme: undefined | string;
   app.get('/', async function (req, res) {
     readme = readme ?? await fs
@@ -21,10 +22,24 @@ export function routing(app: Express): Express {
     res.render('pages/index.ejs', { readme });
   });
 
-  // serve public
+  if (app.config.CACHE_ASSETS) {
+    // asset caching
+    app.use('/assets', function(req, res, next) {
+      // use cache control on assests
+      const ver = req.query.ver;
+      if ((typeof ver) !== 'string') return next();
+      // fingerprinted - intended for caching
+      if (!/\.(js|css|png|jpeg|jpg|svg)$/.test(req.path)) return next();
+      // cache for half a day
+      res.set('Cache-Control', 'public, max-age=43200');
+      next();
+    });
+  }
+
+  // public
   app.use(express.static(app.config.DIR_PUBLIC, { extensions: ['html'], }));
 
-  // endpoint
+  // core endpoint
   app.use('/check', check);
 
   // health check
