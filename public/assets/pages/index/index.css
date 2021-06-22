@@ -1,6 +1,6 @@
 .hero-section {
   padding: var(--spacing-3) 0;
-  height: 440px;
+  height: 200px;
   background-color: var(--bg-secondary);
 }
 

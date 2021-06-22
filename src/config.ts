@@ -94,7 +94,7 @@ export class Config {
 
     // 5 minutes
     this.RATE_LIMIT_WINDOW_MS = extract.optional(() => extract.integer(key.RATE_LIMIT_WINDOW_MS)) ?? 1000 * 60;
-    this.RATE_LIMIT_MAX = extract.optional(() => extract.integer(key.RATE_LIMIT_MAX)) ?? 100;
+    this.RATE_LIMIT_MAX = extract.optional(() => extract.integer(key.RATE_LIMIT_MAX)) ?? 500;
 
     this.CACHE_VIEWS = extract.optional(() => extract.boolean('CACHE_VIEWS')) ?? true;
     this.CACHE_ASSETS = extract.optional(() => extract.boolean('CACHE_ASSETS')) ?? true;

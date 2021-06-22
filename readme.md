@@ -60,7 +60,7 @@ docker run \
   -e LOG_MAX_SIZE=20m \
   -e LOG_ROTATION_MAX_AGE=7d \
   -e RATE_LIMIT_WINDOW_MS=60000 \
-  -e RATE_LIMIT_MAX=100 \
+  -e RATE_LIMIT_MAX=500 \
   -e CACHE_VIEWS=true \
   -e CACHE_ASSETS=true \
   --rm \
@@ -86,7 +86,7 @@ services:
       # - LOG_MAX_SIZE=20m
       # - LOG_ROTATION_MAX_AGE=7d
       # - RATE_LIMIT_WINDOW_MS=60000
-      # - RATE_LIMIT_MAX=100
+      # - RATE_LIMIT_MAX=500
       # - CACHE_VIEWS=true
       # - CACHE_ASSETS=true
 ```

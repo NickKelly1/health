@@ -27,8 +27,8 @@
 }
 
 .tb .tb-content .tb-brand {
-  height: 2em;
-  width: 2em;
+  height: 1.5em;
+  width: 1.5em;
 }
 
 .tb .tb-content .tb-header {
@@ -36,7 +36,8 @@
   margin: 0 auto 0 var(--spacing-3);
   color: var(--text-primary);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0;
+  font-size: 1.25em;
   font-family: 'Roboto';
 }
 
@@ -69,5 +70,20 @@
 }
 
 .tb .tb-content .tb-nav-external .tb-nav-external-item img {
-  max-height: 80%;
+  max-height: 50%;
+}
+
+@media only screen and (min-width: 576px) {
+  .tb .tb-content .tb-brand {
+    height: 2em;
+    width: 2em;
+  }
+
+  .tb .tb-content .tb-header {
+    font-size: 2em;
+  }
+
+  .tb .tb-content .tb-nav-external .tb-nav-external-item img {
+    max-height: 60%;
+  }
 }

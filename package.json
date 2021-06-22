@@ -1,6 +1,6 @@
 {
   "name": "http-icons",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Queries HTTP endpoints and returns pass / fail images based on http status",
   "main": "dist/index.js",
   "dependencies": {
